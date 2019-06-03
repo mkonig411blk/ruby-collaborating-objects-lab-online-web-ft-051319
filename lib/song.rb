@@ -15,7 +15,7 @@ class Song
     new_song.artist = artist
     new_song
     #associate the newly created song with the found or created artist
-    artist.add_song(new_song)
+    new_song.artist_name = artist.name
   end
   
    
