@@ -8,14 +8,14 @@ class Song
   
   def self.new_by_filename(filename)
     file_array = filename.split(" - ")
-    new_song = Song.new(file_array[1])
+    new_song = Song.new(file_array[0])
     #make a new song from the parsed filename
-    artist = Artist.find_or_create_by_name(file_array[0])
+    artist = Artist.find_or_create_by_name(file_array[1])
     #use info from parsed filename to find artist
     new_song.artist = artist
     new_song
     #associate the newly created song with the found or created artist
-    new_song.artist_name = artist.name
+   # new_song.artist_name = artist.name
   end
   
    
