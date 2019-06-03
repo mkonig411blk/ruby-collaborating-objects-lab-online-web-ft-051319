@@ -15,7 +15,7 @@ class Song
     new_song.artist = artist
     new_song
     #associate the newly created song with the found or created artist
-    artist.songs << new_song
+    artist.add_song(new_song)
   end
   
    
