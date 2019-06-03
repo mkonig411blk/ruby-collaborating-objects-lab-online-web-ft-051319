@@ -20,15 +20,4 @@ class Song
 
   end
   
-   
-  
-   def artist_name=(name)
-    self.artist = Artist.find_or_create_by_name(name)
-    #after the artist instance is returned
-    #this method calls the artist instance method #add_song
-    #add_song adds this current song instance to the artist's song list
-    self.artist.add_song(self)
-  end
-  
-  
 end
