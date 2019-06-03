@@ -13,6 +13,7 @@ class Song
     artist = Artist.find_or_create_by_name(file_array[0])
     #use info from parsed filename to find artist
     new_song.artist = artist
+    artist.songs << new_song
     artist.save
     new_song
     #associate the newly created song with the found or created artist
